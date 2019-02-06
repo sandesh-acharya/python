@@ -1,0 +1,6 @@
+string="a=b;c=d;e=f"
+def converter(instring):
+ mylist=[]
+ mylist=[(instring[i],instring[i+2])for i in range(10)if(i%4==0)]
+ print(mylist)
+converter(string)
