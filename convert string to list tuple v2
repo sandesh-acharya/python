@@ -1,7 +1,7 @@
 string="Hello=hi;c=my;ok=f"
 def converter(instring):
  mylist=[]
- string1=string.replace("=",";")
+ string1=instring.replace("=",";")
  mylist=string1.split(";")
  mylist=[(mylist[i],mylist[i+1])for i in range(6)if i%2==0]
  print(mylist)
