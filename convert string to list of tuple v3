@@ -1,0 +1,7 @@
+import re
+instring="Hello=hi;c=my;ok=f;gh=iu;po=rf"
+def converter(instring):
+ mylist=[]
+ mylist=re.split(r"[=;]",instring)
+ print(zip(*[iter(mylist)]*2))
+converter(instring)
