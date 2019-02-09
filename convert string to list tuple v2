@@ -1,8 +1,8 @@
-string="Hello=hi;c=my;ok=f"
+string="Hello=hi;c=my;ok=f;gh=iu;po=rf"
 def converter(instring):
  mylist=[]
- string1=instring.replace("=",";")
- mylist=string1.split(";")
- mylist=[(mylist[i],mylist[i+1])for i in range(6)if i%2==0]
+ instring=instring.split(";")
+ for i in range(len(instring)):
+  mylist.append(tuple(instring[i].split("=")))
  print(mylist)
 converter(string)
